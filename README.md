@@ -2,9 +2,8 @@
 
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/chenlongapps/chenlongapps/output/snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/chenlongapps/chenlongapps/output/snake-light.svg" />
-  <img src="https://raw.githubusercontent.com/chenlongapps/chenlongapps/output/snake-light.svg" alt="contribution snake" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/chenlongapps/chenlongapps/output/ripple-dark.svg" />
+  <img src="https://raw.githubusercontent.com/chenlongapps/chenlongapps/output/ripple.svg" alt="contribution ripples" />
 </picture>
 
 <!---
