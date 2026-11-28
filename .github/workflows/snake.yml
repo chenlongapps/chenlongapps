@@ -15,19 +15,24 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: generate light snake (green)
+      - uses: actions/checkout@v4
+
+      - name: generate dark snake
+        uses: dahan8473/snake-and-commits@v1
+        with:
+          github_user: ${{ github.repository_owner }}
+          output: dist/snake-dark.svg
+          theme: green
+
+      - name: generate light snake
         uses: dahan8473/snake-and-commits@v1
         with:
           github_user: ${{ github.repository_owner }}
           output: dist/snake-light.svg
           theme: green
 
-      - name: generate dark snake (matrix)
-        uses: dahan8473/snake-and-commits@v1
-        with:
-          github_user: ${{ github.repository_owner }}
-          output: dist/snake-dark.svg
-          theme: matrix
+      - name: recolour the light snake
+        run: python3 .github/scripts/light-snake.py dist/snake-light.svg
 
       - name: push svg to the output branch
         uses: crazy-max/ghaction-github-pages@v4
